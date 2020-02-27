@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: sklearn2pmml
+Version: 0.53.0
+Summary: Python library for converting Scikit-Learn pipelines to PMML
+Home-page: https://github.com/jpmml/sklearn2pmml
+Author: Villu Ruusmann
+Author-email: villu.ruusmann@gmail.com
+License: GNU Affero General Public License (AGPL) version 3.0
+Download-URL: https://github.com/jpmml/sklearn2pmml/archive/0.53.0.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
