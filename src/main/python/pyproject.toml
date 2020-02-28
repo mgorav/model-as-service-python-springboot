@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "hr-model"
+version = "0.1.0"
+description = "hr salary predection model"
+authors = ["gmalho"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+loguru = "*"
+psutil = "*"
+pandas = "^1.0.1"
+sklearn = "^0.0"
+Pyro4 = "^4.79"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
