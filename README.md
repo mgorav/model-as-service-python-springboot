@@ -7,7 +7,7 @@
 ````
 mvn clean install -DskipTests
 ````
-3. Python artifacts are managed by poetry
+4. Python artifacts are managed by poetry
 
 ````
 poetry install
