@@ -36,6 +36,14 @@
         </dependency>
 
         <dependency>
+            <groupId>net.razorvine</groupId>
+            <artifactId>pyrolite</artifactId>
+            <version>4.30</version>
+        </dependency>
+
+
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
