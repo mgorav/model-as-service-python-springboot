@@ -1,8 +1,6 @@
 # Random Forest Regression
 
-import matplotlib.pyplot as plt
 # Importing the libraries
-import numpy as np
 import pandas as pd
 
 # Importing the dataset
@@ -31,17 +29,14 @@ regressor.fit(X, y)
 # Predicting a new result
 y_pred = regressor.predict([[6.1]])
 
-from sklearn2pmml.pipeline import PMMLPipeline
+# from sklearn2pmml.pipeline import PMMLPipeline
 
-pipeline = PMMLPipeline([
-    ("regressor_pmml", regressor)
-])
-pipeline.fit(X, y)
+# pipeline = PMMLPipeline([
+#     ("regressor_pmml", regressor)
+# ])
+# pipeline.fit(X, y)
 
 
-# import pickle
-#
-# pickleId = pickle.dump(regressor,open( "model.p", "wb" ))
 
 import Pyro4
 
@@ -79,18 +74,18 @@ print(daemon)
 daemon.requestLoop()
 
 
-from sklearn2pmml import sklearn2pmml
-
-sklearn2pmml(pipeline, "RandomForestRegressor.pmml", with_repr=True)
-
-print("++++++", y_pred)
-
-# Visualising the Random Forest Regression results (higher resolution)
-X_grid = np.arange(min(X), max(X), 0.01)
-X_grid = X_grid.reshape((len(X_grid), 1))
-plt.scatter(X, y, color='red')
-plt.plot(X_grid, regressor.predict(X_grid), color='blue')
-plt.title('Truth or Bluff (Random Forest Regression)')
-plt.xlabel('Position level')
-plt.ylabel('Salary')
-plt.show()
+# from sklearn2pmml import sklearn2pmml
+#
+# sklearn2pmml(pipeline, "RandomForestRegressor.pmml", with_repr=True)
+#
+# print("++++++", y_pred)
+#
+# # Visualising the Random Forest Regression results (higher resolution)
+# X_grid = np.arange(min(X), max(X), 0.01)
+# X_grid = X_grid.reshape((len(X_grid), 1))
+# plt.scatter(X, y, color='red')
+# plt.plot(X_grid, regressor.predict(X_grid), color='blue')
+# plt.title('Truth or Bluff (Random Forest Regression)')
+# plt.xlabel('Position level')
+# plt.ylabel('Salary')
+# plt.show()
