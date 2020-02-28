@@ -1,4 +1,4 @@
-# Salary Predecition As Servcie
+# Salary Predecition As Service
 
 ## Setup
 1. Install java 11
