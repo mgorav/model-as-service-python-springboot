@@ -18,7 +18,9 @@ public class HrApis {
     private final PyroProxy remoteObject;
 
     public HrApis() throws IOException {
+        // automatically locate running Pyro server which contains pickled python object
         NameServerProxy ns = NameServerProxy.locateNS(null);
+        // Get the python object in Java
         remoteObject = new PyroProxy(ns.lookup("NabeeModel"));
     }
 
