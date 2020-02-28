@@ -65,7 +65,9 @@ class NabeeModel(RandomForestRegressor):
 
 nabeeModel = NabeeModel(regressor)
 nabeeModel.fit(X,y)
-nabeeModel.predict([[6.1]])
+outcome = nabeeModel.predict([[6]])
+
+print(outcome)
 
 daemon = daemon.serveSimple({nabeeModel: "NabeeModel"})
 
