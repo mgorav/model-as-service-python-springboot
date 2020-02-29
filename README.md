@@ -39,6 +39,7 @@ Play time!!!
 
 [![Watch the video](./swagger.png)](https://github.com/mgorav/model-as-service-python-springboot/blob/master/hr-model-demo.mov)
 
+@[HR Model As Service](https://github.com/mgorav/model-as-service-python-springboot/blob/master/hr-model-demo.mov)
 
 
 # Getting Started
