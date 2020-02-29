@@ -38,10 +38,9 @@ java -jar target/hr-model-0.0.1-SNAPSHOT.jar
 
 Play time!!!
 
-<a href="./hr-model-demo.mov" target="_blank"></a>
 
+![Model Model Service](./hr-model-demo.mov)
 
-![Hr Model Demo](./hr-model-demo.mov)
 
 
 
