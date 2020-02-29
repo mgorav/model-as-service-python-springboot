@@ -33,15 +33,11 @@ java -jar target/hr-model-0.0.1-SNAPSHOT.jar
 
 6. Open the broser and hit the URL - http://localhost:4200/swagger-ui.html
 
-![alt text](./swagger.png)
-
 
 Play time!!!
 
 
-![Model Model Service](https://github.com/mgorav/model-as-service-python-springboot/blob/master/hr-model-demo.mov)
-
-
+[![Watch the video](./swagger.png)](https://github.com/mgorav/model-as-service-python-springboot/blob/master/hr-model-demo.mov)
 
 
 
