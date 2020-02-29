@@ -1,4 +1,4 @@
-# ML Model In Build In Python, Served As Service In Java/Spring Boot - "Salary Predecition As Service"
+# ML Model Build In Python, Served As Service In Java/Spring Boot - "Salary Predecition As Service"
 This service demonstrates Model serving as REST API. It's an opinionated architecture design, where best of the bread programing language is picked, which they are good at. For example, python is used to created ML model & Java/Spring is used to build REST APIs.
 
 It also uses PYRO4/pickle serialization to serialize ML object and accessed via name server in Java. Further Spring BOOT based REST API uses Hazelcast based distributed caching to store remote python object, to provide HA and scalability along with disaster recovery.
