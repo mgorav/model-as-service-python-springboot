@@ -3,6 +3,8 @@ This service demonstrates Model serving as REST API. It's an opinionated archite
 
 It also uses PYRO4/pickle serialization to serialize ML object and accessed via name server in Java. Further Spring BOOT based REST API uses Hazelcast based distributed caching to store remote python object, to provide HA and scalability along with disaster recovery.
 
+NOTE: Serlization format is configurable.
+
 ![alt text](./MLAsService.png)
 
 ## Setup
