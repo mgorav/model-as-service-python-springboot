@@ -31,7 +31,7 @@ public class HrApis {
         NameServerProxy ns = NameServerProxy.locateNS(null);
         // Get the python object in Java
         remoteObject = new PyroProxy(ns.lookup("NabeeModel"));
-        hazelcastMap = hazelcastInstance.getMap("my-map");
+        hazelcastMap = hazelcastInstance.getMap("nabee-model-cache");
         hazelcastMap.put(KEY, remoteObject);
 
     }
