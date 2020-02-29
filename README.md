@@ -15,10 +15,11 @@ mvn clean install -DskipTests
 ````
 export PYRO_SERIALIZERS_ACCEPTED=serpent,json,marshal,pickle,dill
 
+# run named server
 pyro4-ns
 
 poetry install
-# to directory hr-model/src/main/python
+# go directory hr-model/src/main/python
 python random_forest_regression.py
 ````
 
