@@ -1,7 +1,7 @@
 # Salary Predecition As Service
-This service demonstrates Model serving as REST API. It's an opnionted architexture design, where best of bread programing laguage is picked, which were good at. For example, python is used to created ML model & Java/Spring is used to build REST APIs.
+This service demonstrates Model serving as REST API. It's an opinionated architecture design, where best of the bread programing language is picked, which they are good at. For example, python is used to created ML model & Java/Spring is used to build REST APIs.
 
-It also uses PYRO4/pickle serialization for to serialized ML object and accessed via name server in Java. Further Spring BOOT based REST API Hazelcast based distributed caching to store remote python object, to provide HA and scalability.
+It also uses PYRO4/pickle serialization to serialize ML object and accessed via name server in Java. Further Spring BOOT based REST API uses Hazelcast based distributed caching to store remote python object, to provide HA and scalability along with disaster recovery.
 
 ## Setup
 1. Install java 11
