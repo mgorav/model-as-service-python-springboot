@@ -33,6 +33,7 @@ java -jar target/hr-model-0.0.1-SNAPSHOT.jar
 
 6. Open the broser and hit the URL - http://localhost:4200/swagger-ui.html
 
+![alt text](./swagger.png)
 
 
 Play time!!!
