@@ -30,12 +30,6 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>org.pmml4s</groupId>
-            <artifactId>pmml4s_2.12</artifactId>
-            <version>0.9.3</version>
-        </dependency>
-
-        <dependency>
             <groupId>net.razorvine</groupId>
             <artifactId>pyrolite</artifactId>
             <version>4.30</version>
@@ -46,9 +40,6 @@
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>1.2.32</version>
         </dependency>
-
-
-
 
 
         <dependency>

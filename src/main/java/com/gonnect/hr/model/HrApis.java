@@ -13,7 +13,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
 public class HrApis {
-
+    // Cache the remote model object locally in JVM
     private final PyroProxy remoteObject;
 
     public HrApis() throws IOException {
@@ -32,7 +32,7 @@ public class HrApis {
     }
 
     @GetMapping(value = "/hr/predictor", produces = APPLICATION_JSON_VALUE)
-    public PyroProxy predictor()  {
+    public PyroProxy predictor() {
 
 
         return remoteObject;
