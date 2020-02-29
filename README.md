@@ -38,7 +38,8 @@ java -jar target/hr-model-0.0.1-SNAPSHOT.jar
 
 Play time!!!
 
-[![Hr Model As Service]](hr-model-demo.mov)
+
+![Hr Model Demo](./hr-model-demo.mov)
 
 
 
