@@ -48,8 +48,10 @@ daemon = Pyro4.Daemon()
 import numpy
 @Pyro4.expose
 class NabeeModel(RandomForestRegressor):
-    def __init__(self, obj):
+    features = []
+    def __init__(self, obj,features):
         self._wrapped_obj = obj
+        self.features = features
     def __getattr__(self, attr):
         if attr in self.__dict__:
             return getattr(self, attr)
@@ -62,14 +64,28 @@ class NabeeModel(RandomForestRegressor):
         output = self._wrapped_obj.predict(value)
         print('output: ', output)
         return  output.tolist()
+    def get_features(self):
+        print(self.features)
+        return self.features
 
-nabeeModel = NabeeModel(regressor)
+nabeeModel = NabeeModel(regressor,['level'])
 nabeeModel.fit(X,y)
 outcome = nabeeModel.predict([[6]])
 
 print(outcome)
 
-daemon = daemon.serveSimple({nabeeModel: "NabeeModel"})
+# simulate pickling
+import pickle
+
+pickle.dump(nabeeModel,open( "nabee_model.p", "wb" ))
+file = open( "nabee_model.p", "rb" )
+
+nabeeModel_pickle = pickle.load(file)
+
+daemon = daemon.serveSimple({nabeeModel_pickle: "NabeeModel"})
+
+
+file.close()
 
 print(daemon)
 

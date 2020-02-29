@@ -10,6 +10,10 @@ mvn clean install -DskipTests
 4. Python artifacts are managed by poetry
 
 ````
+export PYRO_SERIALIZERS_ACCEPTED=serpent,json,marshal,pickle,dill
+
+pyro4-ns
+
 poetry install
 # to directory hr-model/src/main/python
 python random_forest_regression.py

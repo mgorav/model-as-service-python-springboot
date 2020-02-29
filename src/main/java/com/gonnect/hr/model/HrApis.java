@@ -2,7 +2,6 @@ package com.gonnect.hr.model;
 
 import net.razorvine.pyro.NameServerProxy;
 import net.razorvine.pyro.PyroProxy;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,5 +29,19 @@ public class HrApis {
         List<Double> output = (List<Double>) remoteObject.call("predict", new Double[]{level});
 
         return new ModelPredict(output.get(0));
+    }
+
+    @GetMapping(value = "/hr/predictor", produces = APPLICATION_JSON_VALUE)
+    public PyroProxy predictor()  {
+
+
+        return remoteObject;
+    }
+
+    @GetMapping(value = "/hr/features", produces = APPLICATION_JSON_VALUE)
+    public List<String> features() throws IOException {
+
+        return (List<String>) remoteObject.call("get_features");
+
     }
 }
