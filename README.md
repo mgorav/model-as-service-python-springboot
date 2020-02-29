@@ -39,7 +39,7 @@ java -jar target/hr-model-0.0.1-SNAPSHOT.jar
 Play time!!!
 
 
-![Model Model Service](./hr-model-demo.mov)
+![Model Model Service](https://github.com/mgorav/model-as-service-python-springboot/blob/master/hr-model-demo.mov)
 
 
 
