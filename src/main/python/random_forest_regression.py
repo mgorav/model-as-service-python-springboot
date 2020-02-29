@@ -29,7 +29,6 @@ regressor.fit(X, y)
 # Predicting a new result
 y_pred = regressor.predict([[6.1]])
 
-
 import Pyro4
 
 # add pickle serializer to pyro
@@ -70,6 +69,16 @@ class NabeeModel(RandomForestRegressor):
 nabeeModel = NabeeModel(regressor, ['level'])
 nabeeModel.fit(X, y)
 outcome = nabeeModel.predict([[6]])
+
+# IF we wish to add object from python to hazelcast
+# import hazelcast
+#
+# hz = hazelcast.HazelcastClient()
+#
+# map = hz.get_map("my-map")
+#
+# map.put("nabee_model",nabeeModel)
+
 
 print(outcome)
 

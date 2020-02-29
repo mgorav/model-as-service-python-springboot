@@ -18,23 +18,21 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @RestController
 public class HrApis {
     // Cache the remote model object locally in JVM
-    private final PyroProxy remoteObject;
+    private PyroProxy remoteObject;
     @Autowired
     private HazelcastInstance hazelcastInstance;
     private Map<String, PyroProxy> hazelcastMap;
     private final String KEY = "nabee_model";
 
     @PostConstruct
-    public void postConstrucxt() {
-        hazelcastMap = hazelcastInstance.getMap("my-map");
-        hazelcastMap.put(KEY, remoteObject);
-    }
+    public void postConstrucxt() throws IOException {
 
-    public HrApis() throws IOException {
         // automatically locate running Pyro server which contains pickled python object
         NameServerProxy ns = NameServerProxy.locateNS(null);
         // Get the python object in Java
         remoteObject = new PyroProxy(ns.lookup("NabeeModel"));
+        hazelcastMap = hazelcastInstance.getMap("my-map");
+        hazelcastMap.put(KEY, remoteObject);
 
     }
 
